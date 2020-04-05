@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// UTILITIES
+@import 'components/variables';
+@import 'components/typography';
+
+// VENDOR
+@import 'vendor/bootstrap';
+@import 'vendor/mixins';
+
+// COMPONENTS
+@import 'components/global';
+@import 'components/transition';
+@import 'components/templates';
+@import 'components/footer';
+
+// PAGES
+@import 'pages/hotel-list';
+@import 'pages/promotions';

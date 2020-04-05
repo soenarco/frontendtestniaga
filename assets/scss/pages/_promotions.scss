@@ -1,0 +1,383 @@
+.promotions {
+  .heading {
+    background-color: $blue;
+    color: $white;
+
+    .row {
+      height: 300px;
+    }
+  }
+
+  .breadcrumb {
+    padding: 1rem 0;
+    font-size: 0.875rem;
+    background-color: $white;
+  }
+
+  .content {
+    padding: 4rem 0;
+    background-color: $white-fade;
+  }
+
+  .promotion-title {
+    color: $black;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .promotions-categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem auto;
+
+    .category-item {
+      padding: 0.75rem 2rem;
+      min-width: 17.5rem;
+      background-color: $grey-light;
+      color: $orange-red;
+      font-weight: 600;
+      font-size: 18px;
+      text-align: center;
+      box-shadow: 0 2px 4px 0 rgba(101, 101, 101, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:first-child {
+        border-radius: 5px 0 0 5px;
+      }
+
+      &:last-child {
+        border-radius: 0 5px 5px 0;
+      }
+
+      &:hover {
+        background-color: #ccc;
+        color: $grey-dark;
+      }
+
+      &.active {
+        background-color: $orange-red;
+        color: $white;
+        font-weight: 800;
+      }
+    }
+  }
+
+  .promotions-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .promotion-item {
+      position: relative;
+      margin: 0 0.75rem 1.5rem;
+      width: calc(33.333% - 1.5rem);
+      border-radius: 0.5rem;
+
+      @media screen and (max-width: 1024px) {
+        width: calc(50% - 1.5rem);
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      .card-img,
+      .card-img-top {
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+
+      .card-img-top {
+        max-height: 12.5rem;
+      }
+
+      .card-body {
+        color: $black;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 18px 26px;
+      }
+
+      .card-footer {
+        padding: 1rem;
+      }
+
+      .card-title {
+        position: absolute;
+        height: 0;
+        font-size: 0;
+        visibility: hidden;
+      }
+
+      .card-text {
+        max-height: 6em;
+        overflow: hidden;
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      .period {
+        strong {
+          display: block;
+          font-weight: 600;
+        }
+      }
+
+      .btn-secondary {
+        display: block;
+        margin: 0 auto;
+        padding: 0.75rem 1rem;
+        width: 75%;
+        background-color: $orange-red;
+        color: $white;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.promotion-details {
+  .heading {
+    background-color: $blue;
+    color: $white;
+
+    .row {
+      height: 300px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    z-index: 2;
+    color: $white;
+    text-align: center;
+    font-weight: 500;
+
+    &.success {
+      background-color: $green;
+    }
+
+    &.failed {
+      background-color: $red;
+    }
+  }
+
+  .breadcrumb {
+    padding: 1rem 0;
+    font-size: 0.875rem;
+    background-color: $white;
+  }
+
+  > .content-top {
+    padding: 4rem 0;
+    background-color: $white;
+    text-align: center;
+
+    p {
+      line-height: 2;
+    }
+  }
+
+  > .content-bottom {
+    padding: 4rem 0;
+    background-color: $white-lite;
+
+    .content-wrapper {
+      padding: 2rem 4rem;
+      background-color: $white;
+      border: none;
+    }
+
+    .card {
+      width: calc((100% / 3) - 2rem);
+    }
+  }
+
+  .promotion-title {
+    color: $black;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .promocode {
+    margin: 0 auto 2rem;
+    text-align: center;
+
+    .promocode-title {
+      margin-bottom: 1rem;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .promocode-item {
+      display: inline-block;
+      margin: 0 0.5rem;
+      padding: 0.5rem;
+      min-width: 275px;
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: #e3e3e3;
+      font-size: 24px;
+      font-weight: 600;
+
+      &.copied {
+        background-color: $red;
+        color: $white;
+        padding: 0;
+      }
+
+      .promocode-code {
+        position: relative;
+        padding: 0.25rem 3.5rem 0.25rem 1rem;
+        background-color: $white;
+        border-radius: 4px;
+        color: $blue;
+      }
+
+      .promocode-cta {
+        width: 100%;
+
+        .btn-cta {
+          display: block;
+          padding: 1rem;
+          width: 100%;
+          color: $white;
+          text-transform: uppercase;
+          font-weight: 600;
+          border: none;
+        }
+
+        .note {
+          display: block;
+          padding: 1rem 3rem;
+          background-color: $green;
+          text-transform: uppercase;
+          color: $white;
+          font-weight: 600;
+          font-size: 18px;
+        }
+      }
+
+      .promocode-copy {
+        position: absolute;
+        right: 1rem;
+        top: auto;
+        bottom: auto;
+        display: inline-block;
+        margin: auto;
+        cursor: pointer;
+
+        .fa {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .period {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+
+    .period-item {
+      display: flex;
+      margin: 1rem;
+      overflow: hidden;
+      border-radius: 6px;
+      background-color: $white;
+      box-shadow: 0 2px 4px 0 rgba(101, 101, 101, 0.25);
+      font-size: 16px;
+      line-height: 1;
+
+      .period-title {
+        padding: 1rem 1.5rem;
+        min-width: 160px;
+        background-color: $grey-light;
+        color: $grey-dark;
+        font-weight: 500;
+      }
+
+      .period-value {
+        padding: 1rem 1.5rem;
+        background-color: $white;
+        color: $black;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .terms {
+    > h3 {
+      color: $blue;
+    }
+
+    .terms-content {
+      line-height: 30px;
+
+      ol, ul {
+        padding-left: 1.5rem;
+      }
+    }
+  }
+
+  .hotels {
+    margin: 2rem 0;
+
+    .hotel-search {
+      label {
+        font-size: 16px;
+        font-weight: normal;
+        color: $grey-dark;
+      }
+
+      .form-control {
+        padding: 1.75rem;
+        font-size: 20px;
+      }
+
+      .input-group-text {
+        padding: 0.5rem 1.25rem;
+        background-color: $red;
+        color: $white;
+      }
+    }
+
+    .hotel-count {
+      margin: 2rem 0;
+    }
+
+    .hotel-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin: 0 -1rem;
+    }
+  }
+
+  .action {
+    margin: 2rem auto;
+    text-align: center;
+
+    .btn-cta {
+      padding: 1rem 3rem;
+      background-color: $red;
+      text-transform: uppercase;
+      color: $white;
+      font-weight: 600;
+    }
+  }
+}

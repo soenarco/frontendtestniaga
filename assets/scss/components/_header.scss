@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+#site-header {
+  background-color: white;
+
+  .header-logo {
+    max-width: 200px;
+  }
+
+  /* TOOLS */
+  .nav-tools {
+    margin: 0;
+  }
+
+  .nav-item {
+    display: inline-block;
+    padding: 0 1rem;
+    color: $black;
+    font-size: 0.875rem;
+
+    &:nth-child(2) {
+      border-right: 1px solid #d8d8d8;
+      height: 16px;
+    }
+  }
+}
