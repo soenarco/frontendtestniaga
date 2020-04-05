@@ -8,3 +8,5 @@ step run project :
 3. use npm run dev
 
 Thanks
+
+note: beberapa aset .svg yg dikasih tidak bisa digunakan.
